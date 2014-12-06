@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="./dist/semantic.min.css"> -->
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.1.2/semantic.min.css">
     <script src="./dist/semantic.min.js"></script>
-    
+
     <link href="./Theme_files/css.css" rel="stylesheet" type="text/css">
 
     <!-- build:css styles/main.css -->
@@ -41,7 +41,7 @@
         text-align: center;
         vertical-align: middle;
         line-height: 40px;
-        color: #9e9e9e;
+        color: #444;
     }
     .date .top-bar {
         height: 25px;
@@ -84,6 +84,12 @@
         background: -webkit-linear-gradient(top, #3BB526 0%, #40CC2A 100%);
         border-bottom: 1px solid #3BB526;
     }
+    .grid-odd-even .two.column.row {
+        border: 1px solid #ddd;
+    }
+    .grid-odd-even .two.column.row:nth-child(even) {
+        background-color: #efefef;
+    }
     </style>
 
 </head>
@@ -95,17 +101,57 @@
     </nav>
     <!-- end nav -->
 
-    <!--  <main class="ui page doubling six column grid">
-        <div class="column">
-            <a href="ProductsAddExpiryDateYear.html" class="ui card">
-                <div class="date">
-                    <div class="top-bar red">15/2/2015</div>
-                    <p>2 days</p>
+    <main class="ui page grid">
+        <div class="row">
+            <div class="column">
+                <h3 class="ui header">Expiry Dates</h3>
+                <div class="ui divider"></div>
+                <div class="ui padded grid grid-odd-even">
+                    <div class="two column row">
+                        <div class="column">
+                            <a class="ui content" href="ProductsAddExpiryDateYear.html">
+                            Szynka drobiowa Duda 200g
+                        </a>
+                        </div>
+                        <div class="column">
+                            <div class="date">
+                                <div class="top-bar red">1/12/2014</div>
+                                <p>-6 days</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="two column row">
+                        <div class="column">
+                            <a class="ui content" href="ProductsAddExpiryDateYear.html">
+                            First Street chicken boneless breast with rib meat
+                        </a>
+                        </div>
+                        <div class="column">
+                            <div class="date">
+                                <div class="top-bar yellow">24/12/2015</div>
+                                <p>10 days</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="two column row">
+                        <div class="column">
+                            <a class="ui content" href="ProductsAddExpiryDateYear.html">
+                            Szynka drobiowa Duda 200g
+                        </a>
+                        </div>
+                        <div class="column">
+                            <div class="date">
+                                <div class="top-bar green">15/2/2014</div>
+                                <p>2m 10d</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="ui content header">Szynka drobiowa Duda 200g</div>
-            </a>
+            </div>
         </div>
-        <div class="column">
+
+        <!-- <div class="column">
             <a href="#" class="ui card">
                 <div class="date">
                     <div class="top-bar red">15/2/2015</div>
@@ -131,10 +177,10 @@
                 </div>
                 <div class="ui content header">Szynka drobiowa Duda 200g</div>
             </a>
-        </div>
-    </main> -->
+        </div> -->
+    </main>
 
-    <main class="ui page grid">
+    <!-- <main class="ui page grid">
         <div class="row">
             <div class="column">
                 <table class="ui large blue compact table">
@@ -186,7 +232,7 @@
             </div>
         </div>
     </main>
-
+ -->
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="./Theme_files/jquery.min.js"></script>
