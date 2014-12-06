@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Towes Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" type="text/css" href="./dist/semantic.min.css">
+    <script src="./dist/semantic.min.js"></script>
+
+    <link href="./Theme_files/css" rel="stylesheet" type="text/css">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="./Theme_files/main.css">
+    <!-- endbuild -->
+
+</head>
+
+<body>
+    <nav class="ui menu inverted navbar page grid">
+        <a href="Products.html" class="active item">Products</a>
+        <a href="ExpiryDates.html" class="item">Expiry Dates</a>
+    </nav>
+    <!-- end nav -->
+
+    <main class="ui page grid">
+        <div class="row">
+            <div class="column">
+                <h3 class="ui header">Szynka drobiowa Duda 200g</h3>
+                <div class="ui divider"></div>
+
+                <div class="ui steps">
+                    <a class="completed step" href="ProductsAddExpiryDateYear.html">
+                        <i class="truck icon"></i>
+                        <div class="content">
+                            <div class="title">Year</div>
+                            <div class="description">Pick the expiry year</div>
+                        </div>
+                    </a>
+                    <a class="completed step" href="ProductsAddExpiryDateMonth.html">
+                        <i class="truck icon"></i>
+                        <div class="content">
+                            <div class="title">Month</div>
+                            <div class="description">Pick the expiry month</div>
+                        </div>
+                    </a>
+                    <a class="completed step" href="ProductsAddExpiryDateDay.html">
+                        <i class="truck icon"></i>
+                        <div class="content">
+                            <div class="title">Day</div>
+                            <div class="description">Pick the expiry day</div>
+                        </div>
+                    </a>
+                    <a class="active step" href="ProductsAddExpiryDateConfirmation.html">
+                        <div class="content">
+                            <div class="title">Submit</div>
+                            <div class="description">Confirm the expiry date</div>
+                        </div>
+                    </a>
+                </div>
+
+                <h5>Selected expiry date:</h5>
+                <div>
+                    <i class="calendar icon"></i>
+                    <span class="ui header">1/1/2014</span>
+                </div>
+
+                <div class="ui divider"></div>
+
+                <a class="big ui primary button" href="Products.html">
+                    Submit
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="./Theme_files/jquery.min.js"></script>
+    <script src="./Theme_files/main.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+</body>
+
+</html>
