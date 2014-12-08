@@ -1,0 +1,18 @@
+{
+  "name": "Towes",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zmotyka/Towes",
+  "authors": [
+    "Zenon Motyka <zmotyka@gmail.com>"
+  ],
+  "description": "Towes Store",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
