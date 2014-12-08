@@ -30,8 +30,6 @@ bld/
 *.VisualState.xml
 TestResult.xml
 
-
-
 # Build Results of an ATL Project
 [Dd]ebugPS/
 [Rr]eleasePS/
@@ -128,13 +126,12 @@ DocProject/Help/html
 # Click-Once directory
 publish/
 
-
 # NPM
-OneSearch.SPA.Web/node_modules/*
-OneSearch.SPA.Web/bower_components/*
+Zen.Towes/node_modules/*
+Zen.Towes/bower_components/*
 
 # Build
-OneSearch.SPA.Web/build/*
+Zen.Towes/build/*
 
 # Publish Web Output
 *.[Pp]ublish.xml
@@ -191,9 +188,3 @@ UpgradeLog*.htm
 *.rdl.data
 *.bim.layout
 *.bim_*.settings
-
-# Microsoft Fakes
-FakesAssemblies/
-OneSearch.SPA.Api.Tests/.nuget/NuGet.Config
-OneSearch.SPA.Api.Tests/.nuget/NuGet.targets
-OneSearch.SPA.Api.Tests/.nuget/NuGet.exe
