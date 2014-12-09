@@ -1,0 +1,8 @@
+<div ng-controller="ProductCtrl">
+    <h1>Products</h1>
+    <div ng-repeat="product in products | orderBy:['-Name']">
+        <a ng-href="/#!/expiry-date/{{product.Id}}">
+            <h3>{{product.Name}}</h3>
+        </a>
+    </div>
+</div>

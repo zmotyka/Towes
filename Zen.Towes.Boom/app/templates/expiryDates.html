@@ -1,0 +1,7 @@
+<div ng-controller="ExpiryDateCtrl">
+    <h1>Expiry Dates</h1>
+    <div ng-repeat="expiryDate in expiryDates | orderBy:['-ExpiryDate']">
+        <h3>{{expiryDate.ProductName}}</h3>
+        <p>{{expiryDate.ExpiryDate}}</p>
+    </div>
+</div>
