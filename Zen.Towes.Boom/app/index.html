@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>towes</title>
+    <title>Towes</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />
     <link rel="stylesheet" href="bower/_bower.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body ng-app="towes">
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
@@ -20,14 +19,119 @@
                 </li>
             </ul>
         </div>
-        <!-- /.container -->
-    </nav>
-    <div class="container-fluid" role="main">
-        <div ng-view></div>
+    </nav>-->
+
+    <!--<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <button type="button" class="btn btn-default btn-back pull-left hidden" onclick="history.back()">
+                <i class="fa fa-lg fa-chevron-left"></i>
+                <span>Back</span>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a ng-href="#!/products">
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-href="#!/expiryDates">
+                            Expiry Dates
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <button type="button" class="btn btn-default btn-back pull-left hidden" onclick="history.back()">
+                <i class="fa fa-lg fa-chevron-left"></i>
+                <span>Back</span>
+            </button>
+            <a class="navbar-brand" title="Towes Store">Towes Store</a>
+            <!--navbar menu options: shown on desktop only -->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-href="#!/products">
+                            <i class="fa fa-dashboard"></i>Products
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-href="#!/expiry-dates">
+                            <i class="fa fa-building-o"></i>Expiry Dates
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 bootcards-list">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <div class="btn-group">
+                <a ng-href="#!/products" class="btn btn-default active">
+                    Products
+                </a>
+                <a ng-href="#!/expiry-dates" class="btn btn-default">
+                    Expiry Dates
+                </a>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript" src="bower/_bower.js"></script>
     <script type="text/javascript" src="js/all.js"></script>
     <!-- endbuild -->
+
+    <!-- Important: you'll only need one of the Bootcards CSS files below for every platform -->
+    <!-- Bootcards CSS for iOS: -->
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/css/bootcards-ios.min.css">-->
+
+    <!-- Bootcards CSS for Android: -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/css/bootcards-android.min.css">
+
+    <!-- Bootcards CSS for desktop: -->
+    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/css/bootcards-desktop.min.css">-->
+
+    <!-- Bootstrap and Bootcards JS -->
+    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootcards/1.0.0/js/bootcards.min.js"></script>
+
+    <!-- Font awesome -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!--recommended: FTLabs FastClick library-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.2/fastclick.min.js"></script>
+
+
 </body>
 </html>

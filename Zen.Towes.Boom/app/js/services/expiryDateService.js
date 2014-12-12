@@ -1,9 +1,7 @@
 ﻿app.service('ExpiryDateService', ['$rootScope', '$resource', function ($rootScope, $resource) {
     'use strict';
 
-    this.getAll = getAll;
-
-    function getAll() {
+    this.getAll = function () {
         return $resource('/data/expiryDateData.json').query();
-    } 
+    }
 }]); 

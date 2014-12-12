@@ -1,9 +1,12 @@
 ﻿app.service('ProductService', ['$rootScope', '$resource', function ($rootScope, $resource) {
     'use strict';
 
-    this.getAll = getAll;
+    this.get = function (productId) {
+        // todo: use productId to query the data
+        return $resource('/data/singleProductData.json').get();
+    }
 
-    function getAll() {
+    this.getAll = function () {
         return $resource('/data/productData.json').query();
     } 
 }]); 

@@ -4,7 +4,19 @@
 ==================================================================*/
 /*global angular*/
 
-var app = angular.module('towes', ["ngCookies", "ngResource", "ngSanitize", "ngRoute", "ngAnimate", "ui.utils", "ui.bootstrap", "ui.router", "ngGrid"]);
+var app = angular.module('towes',
+    [
+        "ngCookies",
+        "ngResource",
+        "ngSanitize",
+        "ngRoute",
+        "ngAnimate",
+        "ui.utils",
+        "ui.bootstrap",
+        "ui.router",
+        "ngGrid",
+        "ui.bootstrap.datetimepicker"
+    ]);
 
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
@@ -14,8 +26,11 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
 		.when('/products', {
 			templateUrl: 'templates/products.html'
 		})
-        .when('/expiryDates', {
+        .when('/expiry-dates', {
             templateUrl: 'templates/expiryDates.html'
+        })
+        .when('/add-expiry-date/:ProductId', {
+            templateUrl: 'templates/addExpiryDate.html'
         })
 		.otherwise({
 			redirectTo: '/products'
