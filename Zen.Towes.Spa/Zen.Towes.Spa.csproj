@@ -1,53 +1,112 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>93b6ce03-668d-45d0-8af8-ac500a54cd3e</ProjectGuid>
-		<OutputType>Library</OutputType>
-		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>Zen.Towes.Spa</RootNamespace>
-		<AssemblyName>Zen.Towes.Spa</AssemblyName>
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-		<FileAlignment>512</FileAlignment>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<DebugType>pdbonly</DebugType>
- 		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System"/>
-		
-		<Reference Include="System.Core"/>
-		<Reference Include="System.Xml.Linq"/>
-		<Reference Include="System.Data.DataSetExtensions"/>
-		
-		
-		<Reference Include="Microsoft.CSharp"/>
- 		
-		<Reference Include="System.Data"/>
-		<Reference Include="System.Xml"/>
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Class1.cs" />
-
-		<Compile Include="Properties\AssemblyInfo.cs" />
-	</ItemGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FC6A7237-F615-45B2-B213-8DCCD5A906D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zen.Towes.Spa</RootNamespace>
+    <AssemblyName>Zen.Towes.Spa</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="app\css\fonts.css" />
+    <Content Include="app\css\main.css" />
+    <Content Include="app\fonts\fontawesome-webfont.svg" />
+    <Content Include="app\img\exclamation.png" />
+    <Content Include="app\img\products\1.jpg" />
+    <Content Include="app\img\products\2.jpg" />
+    <Content Include="app\index.html" />
+    <Content Include="app\js\app.js" />
+    <Content Include="app\js\constants\constants.js" />
+    <Content Include="app\js\controllers\addExpiryDate.js" />
+    <Content Include="app\js\controllers\expiryDate.js" />
+    <Content Include="app\js\controllers\product.js" />
+    <Content Include="app\js\services\expiryDateService.js" />
+    <Content Include="app\js\services\productService.js" />
+    <Content Include="app\templates\addExpiryDate.html" />
+    <Content Include="app\templates\expiryDates.html" />
+    <Content Include="app\templates\products.html" />
+    <Content Include="build\bower\_bower.css" />
+    <Content Include="build\bower\_bower.js" />
+    <Content Include="build\css\styles.css" />
+    <Content Include="build\fonts\fontawesome-webfont.svg" />
+    <Content Include="build\img\exclamation.png" />
+    <Content Include="build\img\products\1.jpg" />
+    <Content Include="build\img\products\2.jpg" />
+    <Content Include="build\index.html" />
+    <Content Include="build\js\all.js" />
+    <Content Include="build\templates\addExpiryDate.html" />
+    <Content Include="build\templates\expiryDates.html" />
+    <Content Include="build\templates\products.html" />
+    <Content Include="gulpfile.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="scss\application.css" />
+    <Content Include="tests\all_api.js" />
+    <Content Include="tests\all_e2e.js" />
+    <Content Include="tests\e2e\sample_test.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".bowerrc" />
+    <None Include=".editorconfig" />
+    <None Include=".jshintrc" />
+    <None Include="app\css\application.scss" />
+    <None Include="app\css\bootstrap.css.map" />
+    <None Include="app\data\expiryDateData.json" />
+    <None Include="app\data\productData.json" />
+    <None Include="app\data\singleProductData.json" />
+    <None Include="app\fonts\fontawesome-webfont.eot" />
+    <None Include="app\fonts\fontawesome-webfont.ttf" />
+    <None Include="app\fonts\fontawesome-webfont.woff" />
+    <None Include="app\fonts\FontAwesome.otf" />
+    <None Include="bower.json" />
+    <None Include="build\data\expiryDateData.json" />
+    <None Include="build\data\productData.json" />
+    <None Include="build\data\singleProductData.json" />
+    <None Include="build\fonts\fontawesome-webfont.eot" />
+    <None Include="build\fonts\fontawesome-webfont.ttf" />
+    <None Include="build\fonts\fontawesome-webfont.woff" />
+    <None Include="build\fonts\FontAwesome.otf" />
+    <None Include="package.json" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\js\directives\" />
+    <Folder Include="app\js\factories\" />
+    <Folder Include="app\js\filters\" />
+    <Folder Include="app\js\libs\" />
+    <Folder Include="app\js\providers\" />
+    <Folder Include="tests\api\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -55,5 +114,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
