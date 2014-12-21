@@ -1,0 +1,16 @@
+<div ng-controller="ExpiryDateCtrl">
+    <div class="bootcards-list">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Expiry Dates</h3>
+            </div>
+            <div class="list-group" ng-repeat="expiryDate in expiryDates | orderBy:['ExpiryDate']">
+                <a class="list-group-item">
+                    <img src="img/exclamation.png" ng-show="expiryDate.IsExpired" class="img-rounded pull-left" />
+                    <h4 class="list-group-item-heading">{{expiryDate.ProductName}}</h4>
+                    <p class="list-group-item-text">{{expiryDate.ExpiryDate}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

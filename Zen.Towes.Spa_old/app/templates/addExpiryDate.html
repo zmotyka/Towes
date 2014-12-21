@@ -1,0 +1,56 @@
+
+<div ng-controller="AddExpiryDateCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title pull-left">New expiry date for "{{product.Name}}"</h3>
+            <div class="btn-group pull-right">
+                <button class="btn btn-danger" ng-click="cancel()">
+                    <i class="fa fa-times"></i>
+                    Cancel
+                </button>
+                <button class="btn btn-success" ng-click="add(product.Id, date)">
+                    <i class="fa fa-check"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="col-xs-12">
+                <h4>Select new expiry date</h4>
+                <datetimepicker data-ng-model="date"
+                                data-datetimepicker-config="{ dropdownSelector: '#expiryDateDropdown', startView: 'year', minView: 'day' }">
+                </datetimepicker>
+                <h4>
+                    Selected date:
+                    <b>
+                        {{date | date:'dd/MM/yyyy'}}
+                    </b>
+                </h4>
+
+                <!--<div class="dropdown">
+                    <a class="dropdown-toggle" id="expiryDateDropdown" role="button" data-toggle="dropdown">
+                        <div class="input-group">
+                            {{date | date:'dd/MM/yyyy'}}
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <datetimepicker data-ng-model="date"
+                                        data-datetimepicker-config="{ dropdownSelector: '#expiryDateDropdown', startView: 'year', minView: 'day' }">
+                        </datetimepicker>
+                    </ul>
+                </div>-->
+            </div>
+            <div class="panel-footer clearfix">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-danger" ng-click="cancel()">
+                        <i class="fa fa-times"></i>
+                        Cancel
+                    </button>
+                    <button class="btn btn-success" ng-click="add(product.Id, date)">
+                        <i class="fa fa-check"></i>
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
