@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Zen.Towes.Model;
 using Zen.Towes.Repository;
+using System.Linq;
 
 namespace Zen.Towes.Bll
 {
     public interface IProductBll
     {
         IEnumerable<Product> Get();
+        void Save(Product product);
     }
 
     public class ProductBll : IProductBll
@@ -26,7 +25,15 @@ namespace Zen.Towes.Bll
 
         public IEnumerable<Product> Get()
         {
-            return _productRepository.Get();
+            return _productRepository.Get().OrderBy(p => p.Name);
+        }
+
+        public void Save(Product product)
+        {
+            product.CreatedOn = DateTime.UtcNow;
+            product.CreatedBy = "Zenon Motyka";
+
+            _productRepository.Save(product);
         }
     }
 }

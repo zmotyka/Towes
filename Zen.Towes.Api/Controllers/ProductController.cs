@@ -20,5 +20,11 @@ namespace Zen.Towes.Api.Controllers
         {
             return _productBll.Get();
         }
+
+        [HttpPost]
+        public void Post(Product product)
+        {
+            _productBll.Save(product);
+        }
     }
 }

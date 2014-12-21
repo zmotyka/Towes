@@ -26,6 +26,9 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
 		.when('/products', {
 			templateUrl: 'templates/products.html'
 		})
+        .when('/products/add', {
+            templateUrl: 'templates/addProduct.html'
+        })
         .when('/expiry-dates', {
             templateUrl: 'templates/expiryDates.html'
         })

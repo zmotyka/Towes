@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using Zen.Towes.Model;
+using System.Linq;
 
 namespace Zen.Towes.Repository
 {
     public interface IProductRepository
     {
         IEnumerable<Product> Get();
+        void Save(Product product);
     }
 
     public class ProductRepository : RepositoryBase<Product>, IProductRepository
@@ -18,12 +20,12 @@ namespace Zen.Towes.Repository
 
         public IEnumerable<Product> Get()
         {
-            return new[] 
-            { 
-                new Product { Id = 1, Name = "First Street chicken boneless breast with rib meat", ImgSrc = "./img/products/2.jpg" },
-                new Product { Id = 2, Name = "Szynka drobiowa Duda 200g", ImgSrc = "./img/products/1.jpg" },
-                new Product { Id = 3, Name = "Szynka drobiowa Duda 200g", ImgSrc = "./img/products/1.jpg" },
-            };
+            return base.GetAll().ToList();
+        }
+
+        public void Save(Product product)
+        {
+            base.Add(product);
         }
     }
 }

@@ -2,6 +2,7 @@
 using Ninject.Web.Common;
 using System.Web.Http;
 using System.Web.Mvc;
+using System.Web.Routing;
 using Zen.Towes.Api.IoCConfig;
 
 namespace Zen.Towes.Api
@@ -14,6 +15,7 @@ namespace Zen.Towes.Api
 
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
         protected override IKernel CreateKernel()

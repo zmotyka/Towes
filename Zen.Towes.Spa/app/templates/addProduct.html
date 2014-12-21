@@ -1,0 +1,45 @@
+<div ng-controller="AddProductCtrl as product">
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title pull-left">Add New Product</h3>
+            <div class="btn-group pull-right">
+                <button class="btn btn-danger" ng-click="cancel()">
+                    <i class="fa fa-times"></i>
+                    Cancel
+                </button>
+                <button class="btn btn-success" ng-click="save(product)">
+                    <i class="fa fa-check"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Name</label>
+                <div class="col-xs-9">
+                    <input type="text" class="form-control" placeholder="Name" ng-model="product.name">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label class="col-xs-3 control-label">Img Src</label>
+                <div class="col-xs-9">
+                    <input type="text" class="form-control" placeholder="Img Src" ng-model="product.imgSrc">
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="btn-group pull-right">
+                <button class="btn btn-danger" ng-click="cancel()">
+                    <i class="fa fa-times"></i>
+                    Cancel
+                </button>
+                <button class="btn btn-success" ng-click="save(product)">
+                    <i class="fa fa-check"></i>
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

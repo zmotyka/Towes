@@ -9,5 +9,9 @@
     this.getAll = function () {
         return $resource(ApiBasePath + 'product').query();
         //return $resource('/data/productData.json').query();
-    } 
+    }
+
+    this.save = function (product) {
+        return $resource(ApiBasePath + 'product').save(product);
+    }
 }]); 

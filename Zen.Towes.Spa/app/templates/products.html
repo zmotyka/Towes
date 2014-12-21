@@ -59,8 +59,14 @@
 
 
     <div class="panel panel-default bootcards-summary">
-        <div class="panel-heading">
-            <h3 class="panel-title">Products</h3>
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title pull-left">Products</h3>
+            <div class="btn-group pull-right">
+                <a class="btn btn-primary" ng-href="/#!/products/add" data-toggle="modal" data-target="#editModal">
+                    <i class="fa fa-plus"></i>
+                    <span>Add</span>
+                </a>
+            </div>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -70,7 +76,7 @@
                             <img ng-src="{{product.ImgSrc}}" height="60" />
                         </div>
                         <!--<i class="fa fa-3x fa-users"></i>-->
-                        <h4>{{product.Name}}<span class="label label-info"></span></h4>
+                        <h5>{{product.Name}}<span class="label label-info"></span></h5>
                     </a>
                 </div>
             </div>

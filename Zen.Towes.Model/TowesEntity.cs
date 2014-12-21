@@ -10,6 +10,8 @@ namespace Zen.Towes.Model
         public TowesEntity()
             : base("name=TowesEntity")
         {
+            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<ExpiryDate> ExpiryDates { get; set; }
