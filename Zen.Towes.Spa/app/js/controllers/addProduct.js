@@ -6,7 +6,6 @@ app.controller('AddProductCtrl', ['$scope', '$location', '$routeParams', 'Produc
 
     var baseProduct = {
         name: '',
-        imgSrc: ''
     };
 
     $scope.product = baseProduct;

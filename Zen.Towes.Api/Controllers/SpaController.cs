@@ -7,7 +7,7 @@ namespace Zen.Towes.Api.Controllers
         // GET: Spa
         public ActionResult Index()
         {
-            return File("build/index.html", "text/html");
+            return File("index.html", "text/html");
         }
     }
 }
