@@ -1,8 +1,6 @@
 
-app.controller('AddProductCtrl', ['$scope', '$location', '$routeParams', 'ProductService', function ($scope, $location, $routeParams, ProductService) {
+app.controller('AddProductCtrl', ['$scope', '$location', '$routeParams', 'ProductService', 'ProductListRoute', function ($scope, $location, $routeParams, ProductService, ProductListRoute) {
     'use strict';
-
-    var redirectRoute = '/products';
 
     var baseProduct = {
         name: '',
@@ -13,12 +11,12 @@ app.controller('AddProductCtrl', ['$scope', '$location', '$routeParams', 'Produc
     $scope.save = function (product) {
         ProductService.save(product).$promise
             .then(function () {
-                $location.path(redirectRoute);
+                $location.path(ProductListRoute);
             });
     }
 
     $scope.cancel = function () {
-        $location.path(redirectRoute);
+        $location.path(ProductListRoute);
     }
 }]);
 

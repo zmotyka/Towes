@@ -9,7 +9,8 @@ namespace Zen.Towes.Bll
 {
     public interface IProductBll
     {
-        IEnumerable<Product> Get();
+        Product GetProduct(int id);
+        IEnumerable<Product> GetProducts();
         void Save(Product product);
     }
 
@@ -25,9 +26,14 @@ namespace Zen.Towes.Bll
             _productRepository = productRepository;
         }
 
-        public IEnumerable<Product> Get()
+        public Product GetProduct(int id)
         {
-            return _productRepository.Get().OrderBy(p => p.Name);
+            return _productRepository.GetProduct(id);
+        }
+
+        public IEnumerable<Product> GetProducts()
+        {
+            return _productRepository.GetProducts().OrderBy(p => p.Name);
         }
 
         public void Save(Product product)

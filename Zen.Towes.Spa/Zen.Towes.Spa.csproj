@@ -44,13 +44,14 @@
     <Content Include="app\js\app.js" />
     <Content Include="app\js\constants\constants.js" />
     <Content Include="app\js\controllers\addExpiryDate.js" />
-    <Content Include="app\js\controllers\expiryDate.js" />
+    <Content Include="app\js\controllers\productExpiryDate.js" />
     <Content Include="app\js\controllers\addProduct.js" />
     <Content Include="app\js\controllers\product.js" />
+    <Content Include="app\js\services\productExpiryDateService.js" />
     <Content Include="app\js\services\expiryDateService.js" />
     <Content Include="app\js\services\productService.js" />
     <Content Include="app\templates\addExpiryDate.html" />
-    <Content Include="app\templates\expiryDates.html" />
+    <Content Include="app\templates\productExpiryDates.html" />
     <Content Include="app\templates\addProduct.html" />
     <Content Include="app\templates\products.html" />
     <Content Include="build\bower\_bower.css" />

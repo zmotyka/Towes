@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
-using Zen.Towes.Model;
 using System.Linq;
+using Zen.Towes.Model;
 
 namespace Zen.Towes.Repository
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> Get();
+        Product GetProduct(int id);
+        IEnumerable<Product> GetProducts();
         void Save(Product product);
     }
 
@@ -18,7 +19,12 @@ namespace Zen.Towes.Repository
         {
         }
 
-        public IEnumerable<Product> Get()
+        public Product GetProduct(int id)
+        {
+            return base.Get(id);
+        }
+
+        public IEnumerable<Product> GetProducts()
         {
             return base.GetAll().ToList();
         }

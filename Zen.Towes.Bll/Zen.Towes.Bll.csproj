@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductExpiryDateBll.cs" />
     <Compile Include="IoCConfig\NinjectModuleConfig.cs" />
+    <Compile Include="ExpiryDateBll.cs" />
     <Compile Include="ProductBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -2,9 +2,10 @@
     .bootcards-summary-item {
         display: block;
     }
-    .bootcards-summary-item .image {
-        text-align: center;
-    }
+
+        .bootcards-summary-item .image {
+            text-align: center;
+        }
 </style>
 <div ng-controller="ProductCtrl">
     <!--<h1>Products</h1>
@@ -13,7 +14,6 @@
             <h3>{{product.Name}}</h3>
         </a>
     </div>-->
-
     <!--<div class="panel panel-default bootcards-summary">
         <div class="panel-heading">
             <h3 class="panel-title">Summary Card Heading</h3>
@@ -61,16 +61,26 @@
     <div class="panel panel-default bootcards-summary">
         <div class="panel-heading clearfix">
             <h3 class="panel-title pull-left">Products</h3>
-            <div class="btn-group pull-right">
-                <a class="btn btn-primary" ng-href="/#!/products/add" data-toggle="modal" data-target="#editModal">
-                    <i class="fa fa-plus"></i>
-                    <span>Add</span>
-                </a>
-            </div>
         </div>
         <div class="panel-body">
+            <div class="search-form">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <div class="form-group">
+                            <input type="text" ng-model="search.Name" class="form-control" placeholder="Search Products...">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <a class="btn btn-primary btn-block" ng-href="/#!/products/add">
+                            <i class="fa fa-plus"></i>
+                            <span>Add</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-xs-6 col-sm-4" ng-repeat="product in products | orderBy:['-Name']">
+                <div class="col-xs-6 col-sm-4" ng-repeat="product in products | filter:search">
                     <a class="bootcards-summary-item" ng-href="/#!/add-expiry-date/{{product.Id}}">
                         <div class="image">
                             <img ng-src="{{product.ImgSrc}}" height="60" />

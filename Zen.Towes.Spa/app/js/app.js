@@ -30,7 +30,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
             templateUrl: 'templates/addProduct.html'
         })
         .when('/expiry-dates', {
-            templateUrl: 'templates/expiryDates.html'
+            templateUrl: 'templates/productExpiryDates.html'
         })
         .when('/add-expiry-date/:ProductId', {
             templateUrl: 'templates/addExpiryDate.html'

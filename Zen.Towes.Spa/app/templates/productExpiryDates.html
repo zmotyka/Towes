@@ -1,14 +1,14 @@
-<div ng-controller="ExpiryDateCtrl">
+<div ng-controller="ProductExpiryDateCtrl">
     <div class="bootcards-list">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Expiry Dates</h3>
             </div>
-            <div class="list-group" ng-repeat="expiryDate in expiryDates | orderBy:['ExpiryDate']">
+            <div class="list-group" ng-repeat="expiryDate in expiryDates | orderBy:['DueDate']">
                 <a class="list-group-item">
-                    <img src="img/exclamation.png" ng-show="expiryDate.IsExpired" class="img-rounded pull-left" />
+                    <img src="img/exclamation.png" ng-show="expiryDate.DaysLeft < 7" class="img-rounded pull-left" />
                     <h4 class="list-group-item-heading">{{expiryDate.ProductName}}</h4>
-                    <p class="list-group-item-text">{{expiryDate.ExpiryDate}}</p>
+                    <p class="list-group-item-text">{{expiryDate.DueDate | date:'dd/MM/yyyy'}}</p>
                 </a>
             </div>
         </div>

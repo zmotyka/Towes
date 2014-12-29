@@ -2,13 +2,11 @@
     'use strict';
 
     this.get = function (productId) {
-        // todo: use productId to query the data
-        return $resource('/data/singleProductData.json').get();
+        return $resource(ApiBasePath + 'product/' + productId).get();
     }
 
     this.getAll = function () {
         return $resource(ApiBasePath + 'product').query();
-        //return $resource('/data/productData.json').query();
     }
 
     this.save = function (product) {

@@ -191,6 +191,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ProductExpiryDateController.cs" />
+    <Compile Include="Controllers\ExpiryDateController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SpaController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />

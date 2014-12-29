@@ -1,29 +1,38 @@
 
-app.controller('AddExpiryDateCtrl', ['$scope', '$location', '$routeParams', 'ExpiryDateService', 'ProductService', function ($scope, $location, $routeParams, ExpiryDateService, ProductService) {
+app.controller('AddExpiryDateCtrl', ['$scope', '$location', '$routeParams', 'ExpiryDateService', 'ProductService', 'ProductExpiryDateService', 'ProductListRoute', function ($scope, $location, $routeParams, ExpiryDateService, ProductService, ProductExpiryDateService, ProductListRoute) {
     'use strict';
 
-    var redirectRoute = '/products';
-    var defaultDate = '1/1/2015';
-
-    $scope.date = defaultDate;
-
-    $scope.init = function () {
-        ProductService.get($routeParams.ProductId).$promise
-        .then(function (product) {
-            $scope.product = product
-        });
+    var baseExpiryDate = {
+        productId: $routeParams.ProductId,
+        dueDate: new Date()
     }
 
-    $scope.init();
+    $scope.expiryDate = baseExpiryDate;
+    $scope.currentExpiryDates = [];
+
+    $scope.init = function (productId) {
+        ProductService.get(productId).$promise
+            .then(function (product) {
+                $scope.product = product;
+            });
+
+        ProductExpiryDateService.getForProduct(productId).$promise
+            .then(function (productExpiryDates) {
+                $scope.currentExpiryDates = productExpiryDates;
+            });
+    }
+
+    $scope.init(baseExpiryDate.productId);
 
     $scope.cancel = function () {
-        $location.path(redirectRoute);
+        $location.path(ProductListRoute);
     }
 
-    $scope.add = function (productId, date) {
-        // TODO: call service method to add
-
-        $location.path(redirectRoute);
+    $scope.save = function (expiryDate) {
+        ExpiryDateService.save(expiryDate).$promise
+            .then(function () {
+                $location.path(ProductListRoute);
+            })
     }
 }]);
 

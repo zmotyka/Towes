@@ -16,9 +16,16 @@ namespace Zen.Towes.Api.Controllers
             _productBll = productBll;
         }
 
-        public IEnumerable<Product> Get()
+        [ActionName("GetAll")]
+        public IEnumerable<Product> GetProducts()
         {
-            return _productBll.Get();
+            return _productBll.GetProducts();
+        }
+
+        [ActionName("Get")]
+        public Product GetProduct(int id)
+        {
+            return _productBll.GetProduct(id);
         }
 
         [HttpPost]

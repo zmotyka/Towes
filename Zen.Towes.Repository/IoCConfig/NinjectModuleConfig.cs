@@ -12,6 +12,8 @@ namespace Zen.Towes.Repository.IoCConfig
             Bind(typeof(DbContext)).To(typeof(TowesEntity)).InRequestScope();
 
             Bind<IProductRepository>().To<ProductRepository>();
+            Bind<IExpiryDateRepository>().To<ExpiryDateRepository>();
+            Bind<IProductExpiryDateRepository>().To<ProductExpiryDateRepository>();
         }
     }
 }
